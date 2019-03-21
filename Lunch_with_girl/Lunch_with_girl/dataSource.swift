@@ -8,7 +8,7 @@
 
 import Foundation
 
-class dataSource {
+class SerifDataSource {
     
     //ランチの内容
     var selectLunch = [

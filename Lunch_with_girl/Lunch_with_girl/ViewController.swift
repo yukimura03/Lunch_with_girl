@@ -20,18 +20,18 @@ class ViewController: UIViewController {
     var random = 0
     var girlVoice : AVAudioPlayer!
     
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        setup()
+    }
+    
+    func setup() {
+        numberOfText = 0
+        serifLabel.text = "タップしてスタート！"
+        girlImage.image = UIImage(named: "girl_nomal")
+    }
     
     @IBAction func buttonTapped(_ sender: Any) {
-        
-        //セリフの内容
-        var serif = [
-            "タップしてスタート！",
-            "おつかれさま。\nお昼、何食べましょうか。",
-            "えっ、わたしが決めるんですか？",
-            "えーと・・・じゃあ・・・",
-            "サンドイッチの気分です。\nタマゴサンド、好きなんですよ。",
-            //selectLunch[random],
-            "ほらほら、時間なくなっちゃいますよ。\n早く食べに行きましょう！"]
         
         numberOfText += 1
         
@@ -39,9 +39,30 @@ class ViewController: UIViewController {
             numberOfText = 0
         }
         
+        talk()
+        changeImage()
+        
+    }
+
+    func talk()  {
+        let dataSource = SerifDataSource()
+        let random = Int(arc4random_uniform(8))
+        
+        //セリフの内容
+        var serif = [
+            "タップしてスタート！",
+            "おつかれさま。\nお昼、何食べましょうか。",
+            "えっ、わたしが決めるんですか？",
+            "えーと・・・じゃあ・・・",
+            dataSource.selectLunch[random],
+            "ほらほら、時間なくなっちゃいますよ。\n早く食べに行きましょう！"]
+        
         serifLabel.numberOfLines = 0
         serifLabel.text = serif[numberOfText]
         
+    }
+    
+    func changeImage() {
         switch numberOfText {
         case 0...2:
             girlImage.image = UIImage(named: "girl_nomal")
@@ -55,21 +76,7 @@ class ViewController: UIViewController {
         default:
             fatalError()
         }
-
-        
     }
-    
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
-        setup()
-    }
-
-    func setup() {
-        numberOfText = 0
-        serifLabel.text = "タップしてスタート！"
-        girlImage.image = UIImage(named: "girl_nomal")
-    }
-
 }
+
 
