@@ -9,7 +9,7 @@
 import UIKit
 import AVFoundation
 
-class ViewController: UIViewController {
+class RestrantsSelectViewController: UIViewController {
     
     @IBOutlet weak var girlImage: UIImageView!
     @IBOutlet weak var frame: UIImageView!
