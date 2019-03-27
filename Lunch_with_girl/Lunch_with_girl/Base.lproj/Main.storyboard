@@ -83,24 +83,9 @@
             <point key="canvasLocation" x="136.80000000000001" y="131.78410794602701"/>
         </scene>
         <!--Mode Select View Controller-->
-        <scene sceneID="ZRQ-hf-ChF">
-            <objects>
-                <viewController id="act-Be-Z3t" customClass="ModeSelectViewController" customModule="Lunch_with_girl" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="EFM-O9-cpY">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                        <viewLayoutGuide key="safeArea" id="eDV-uj-Vg8"/>
-                    </view>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="15t-DK-Qvx" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="112.8" y="994.45277361319347"/>
-        </scene>
-        <!--Menu Select View Controller-->
         <scene sceneID="dXY-OV-cvf">
             <objects>
-                <viewController id="hSq-HM-dbJ" customClass="MenuSelectViewController" customModule="Lunch_with_girl" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="hSq-HM-dbJ" customClass="ModeSelectViewController" customModule="Lunch_with_girl" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Qb0-0f-fbc">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -110,7 +95,7 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="お店えらび"/>
                                 <connections>
-                                    <segue destination="BYZ-38-t0r" kind="show" id="qxa-bB-UqZ"/>
+                                    <segue destination="BYZ-38-t0r" kind="showDetail" identifier="showRestSelectView" id="qxa-bB-UqZ"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QC2-uh-Mck">
@@ -118,7 +103,7 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="メニュー選び"/>
                                 <connections>
-                                    <segue destination="act-Be-Z3t" kind="show" id="gqh-w0-aPE"/>
+                                    <segue destination="c8d-ab-tnE" kind="show" identifier="showMenuSelectView" id="QPO-rU-o1b"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -130,10 +115,85 @@
             </objects>
             <point key="canvasLocation" x="-694" y="132"/>
         </scene>
+        <!--Menu Select View Controller-->
+        <scene sceneID="2mO-al-Krg">
+            <objects>
+                <viewController id="c8d-ab-tnE" customClass="MenuSelectViewController" customModule="Lunch_with_girl" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="iq2-Vl-F7m">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="girl_think" translatesAutoresizingMaskIntoConstraints="NO" id="Qmv-n9-lf6">
+                                <rect key="frame" x="0.0" y="20" width="375" height="647"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="bdd903f171c6d8d5bf1a3c17e89c4187" translatesAutoresizingMaskIntoConstraints="NO" id="weH-BU-epP">
+                                <rect key="frame" x="16" y="467" width="343" height="173"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="weH-BU-epP" secondAttribute="height" multiplier="343:173" id="VNH-jv-tzX"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" alpha="0.69999998807907104" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mcF-JV-aZo">
+                                <rect key="frame" x="46" y="490" width="284" height="127"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="mcF-JV-aZo" secondAttribute="height" multiplier="284:127" id="xbj-S4-Rhw"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vVb-c8-14e">
+                                <rect key="frame" x="252" y="541" width="70" height="66"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="70" id="MsM-ha-Huc"/>
+                                    <constraint firstAttribute="width" secondItem="vVb-c8-14e" secondAttribute="height" multiplier="35:33" id="TkT-ON-7lE"/>
+                                </constraints>
+                                <state key="normal" title="Button" image="food_menu"/>
+                                <connections>
+                                    <action selector="buttonTapped:" destination="c8d-ab-tnE" eventType="touchUpInside" id="CUe-ft-aui"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7Ar-PV-QA5">
+                                <rect key="frame" x="322" y="44" width="31" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="戻る"/>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="mes-kg-P3T" firstAttribute="trailing" secondItem="mcF-JV-aZo" secondAttribute="trailing" constant="45" id="0pp-DS-IJ8"/>
+                            <constraint firstItem="mes-kg-P3T" firstAttribute="trailing" secondItem="weH-BU-epP" secondAttribute="trailing" constant="16" id="C96-Fj-xPf"/>
+                            <constraint firstItem="mes-kg-P3T" firstAttribute="trailing" secondItem="vVb-c8-14e" secondAttribute="trailing" constant="53" id="JFD-se-vSD"/>
+                            <constraint firstItem="mes-kg-P3T" firstAttribute="bottom" secondItem="weH-BU-epP" secondAttribute="bottom" constant="27" id="OIO-Vo-p8z"/>
+                            <constraint firstItem="mes-kg-P3T" firstAttribute="trailing" secondItem="vVb-c8-14e" secondAttribute="trailing" constant="53" id="QfJ-M5-kHu"/>
+                            <constraint firstItem="mes-kg-P3T" firstAttribute="bottom" secondItem="vVb-c8-14e" secondAttribute="bottom" constant="60" id="Skw-k5-s9D"/>
+                            <constraint firstItem="Qmv-n9-lf6" firstAttribute="trailing" secondItem="mes-kg-P3T" secondAttribute="trailing" id="XY9-LA-7sK"/>
+                            <constraint firstItem="mcF-JV-aZo" firstAttribute="leading" secondItem="mes-kg-P3T" secondAttribute="leading" constant="46" id="Y89-hp-tic"/>
+                            <constraint firstItem="mes-kg-P3T" firstAttribute="bottom" secondItem="vVb-c8-14e" secondAttribute="bottom" constant="60" id="aqa-aV-22O"/>
+                            <constraint firstItem="mes-kg-P3T" firstAttribute="bottom" secondItem="mcF-JV-aZo" secondAttribute="bottom" constant="50" id="eZa-GX-rDs"/>
+                            <constraint firstItem="Qmv-n9-lf6" firstAttribute="leading" secondItem="iq2-Vl-F7m" secondAttribute="leading" id="iLb-A6-yTk"/>
+                            <constraint firstItem="Qmv-n9-lf6" firstAttribute="bottom" secondItem="mes-kg-P3T" secondAttribute="bottom" id="oC6-DQ-Y61"/>
+                            <constraint firstItem="Qmv-n9-lf6" firstAttribute="top" secondItem="mes-kg-P3T" secondAttribute="top" id="qtR-kf-IhB"/>
+                            <constraint firstItem="weH-BU-epP" firstAttribute="leading" secondItem="mes-kg-P3T" secondAttribute="leading" constant="16" id="y2G-4d-OD5"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="mes-kg-P3T"/>
+                    </view>
+                    <connections>
+                        <outlet property="button" destination="vVb-c8-14e" id="27b-fJ-TDV"/>
+                        <outlet property="girlImage" destination="Qmv-n9-lf6" id="sTh-gw-UNG"/>
+                        <outlet property="serifLabel" destination="mcF-JV-aZo" id="mSG-jB-FhV"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="pMD-EU-w6m" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="136.80000000000001" y="993.55322338830592"/>
+        </scene>
     </scenes>
     <resources>
         <image name="bdd903f171c6d8d5bf1a3c17e89c4187" width="1000" height="600"/>
+        <image name="food_menu" width="749" height="800"/>
         <image name="girl_nomal" width="771" height="1370"/>
+        <image name="girl_think" width="771" height="1370"/>
         <image name="進む" width="200" height="200"/>
     </resources>
 </document>
