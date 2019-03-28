@@ -151,6 +151,7 @@
                                 <state key="normal" title="Button" image="food_menu"/>
                                 <connections>
                                     <action selector="buttonTapped:" destination="c8d-ab-tnE" eventType="touchUpInside" id="CUe-ft-aui"/>
+                                    <segue destination="ZU6-Ox-Ath" kind="showDetail" id="W1L-bi-nY6"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7Ar-PV-QA5">
@@ -187,6 +188,58 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="pMD-EU-w6m" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="136.80000000000001" y="993.55322338830592"/>
+        </scene>
+        <!--Menu Table View Controller-->
+        <scene sceneID="Mwv-Cd-VfX">
+            <objects>
+                <viewController id="ZU6-Ox-Ath" customClass="MenuTableViewController" customModule="Lunch_with_girl" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="UW6-1l-xdm">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ibl-4T-SC4">
+                                <rect key="frame" x="52" y="100" width="202" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mCv-ak-x2h">
+                                <rect key="frame" x="294" y="100" width="31" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="追加"/>
+                                <connections>
+                                    <action selector="addButtonTapped:" destination="ZU6-Ox-Ath" eventType="touchUpInside" id="j0s-Xf-8AW"/>
+                                </connections>
+                            </button>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="RN5-f9-6Bh">
+                                <rect key="frame" x="0.0" y="166" width="375" height="501"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="menuCell" id="jU2-AH-juP">
+                                        <rect key="frame" x="0.0" y="28" width="375" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="jU2-AH-juP" id="5kS-u4-ZlO">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="P4O-6x-jcz"/>
+                    </view>
+                    <connections>
+                        <outlet property="addButton" destination="mCv-ak-x2h" id="1ET-Nu-all"/>
+                        <outlet property="menuTableView" destination="RN5-f9-6Bh" id="mgK-n4-NGt"/>
+                        <outlet property="textField" destination="ibl-4T-SC4" id="XEW-mv-Zvv"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="EI9-6g-d3B" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1020" y="993.55322338830592"/>
         </scene>
     </scenes>
     <resources>

@@ -15,15 +15,12 @@ class MenuSelectViewController: UIViewController {
     @IBOutlet weak var serifLabel: UILabel!
     @IBOutlet weak var button: UIButton!
     
-    let dataSource = MenuDataSource()
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         setup()
     }
     
     func setup() {
-        dataSource.menuReset()
         let text = "うーん、何を頼みましょうか・・・"
         serifLabel.text = text
     }

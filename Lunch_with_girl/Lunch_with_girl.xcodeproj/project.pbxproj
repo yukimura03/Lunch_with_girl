@@ -16,6 +16,7 @@
 		494F26DE224BB29800EB9A1C /* ModeSelectViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 494F26DD224BB29800EB9A1C /* ModeSelectViewController.swift */; };
 		494F26E0224BB40800EB9A1C /* MenuSelectViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 494F26DF224BB40800EB9A1C /* MenuSelectViewController.swift */; };
 		49C73C80224BBEF600CF729F /* MenuDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49C73C7F224BBEF600CF729F /* MenuDataSource.swift */; };
+		49C73C84224D12D400CF729F /* MenuTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49C73C83224D12D400CF729F /* MenuTableViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,6 +31,7 @@
 		494F26DD224BB29800EB9A1C /* ModeSelectViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModeSelectViewController.swift; sourceTree = "<group>"; };
 		494F26DF224BB40800EB9A1C /* MenuSelectViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuSelectViewController.swift; sourceTree = "<group>"; };
 		49C73C7F224BBEF600CF729F /* MenuDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuDataSource.swift; sourceTree = "<group>"; };
+		49C73C83224D12D400CF729F /* MenuTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuTableViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -68,6 +70,7 @@
 				494F26CB2243BEFD00EB9A1C /* RestaurantsSelectViewController.swift */,
 				494F26DB2243C27F00EB9A1C /* SerifDataSource.swift */,
 				494F26DF224BB40800EB9A1C /* MenuSelectViewController.swift */,
+				49C73C83224D12D400CF729F /* MenuTableViewController.swift */,
 				49C73C7F224BBEF600CF729F /* MenuDataSource.swift */,
 				494F26D02243BEFE00EB9A1C /* Assets.xcassets */,
 				494F26D22243BEFE00EB9A1C /* LaunchScreen.storyboard */,
@@ -148,6 +151,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				494F26CC2243BEFD00EB9A1C /* RestaurantsSelectViewController.swift in Sources */,
+				49C73C84224D12D400CF729F /* MenuTableViewController.swift in Sources */,
 				494F26CA2243BEFD00EB9A1C /* AppDelegate.swift in Sources */,
 				494F26DC2243C27F00EB9A1C /* SerifDataSource.swift in Sources */,
 				49C73C80224BBEF600CF729F /* MenuDataSource.swift in Sources */,
